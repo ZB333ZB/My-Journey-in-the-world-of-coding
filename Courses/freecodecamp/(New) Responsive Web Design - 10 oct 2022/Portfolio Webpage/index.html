@@ -9,23 +9,24 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&family=Roboto+Mono:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet"> 
 
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- adding icon to tab --> 
         <link rel="stylesheet" href="styles.css">
         <meta name="description" content="Here you can find all the works of @AlexBerz since the beginning of his coding journey">
         <title>@AlexBerz's Portfolio Page</title>
     </head>
     <body>
         <header id="header">
+            <img src="favicon.png" alt="Icon" loading="lazy" id="header-icon">
             <nav id="navbar">
-                <ul>
+                <ul id="navbar-links">
                     <li>
-                        <a href="#welcome-section">About</a>
+                        <a class="navbar-link underline-hover-effect" href="#welcome-section">About</a>
                     </li>
                     <li>
-                        <a href="#projects">My Projects</a>
+                        <a class="navbar-link underline-hover-effect" href="#projects">My Projects</a>
                     </li>
                     <li>
-                        <a href="Contact">Contact</a>
+                        <a class="navbar-link underline-hover-effect" href="Contact">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -35,9 +36,10 @@
                 <h1 id="title">@AlexBerz</h1>
                 <h2 id="subtitle">Just interested in coding</h2>
             </section>
-            <section id="projects">
+            <section id="project-tiles">
                 <div class="project-tile"> <!-- at least one -->
                     <a href=""></a> <!-- link to the project -->
+                    <h3 class="project-name"></h3>
                 </div>
             </section>
         </main>

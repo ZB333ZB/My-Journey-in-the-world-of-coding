@@ -11,14 +11,15 @@
 }
 
 :root {
-    --color-text: #ced4da;
+    --color-text: #dee2e6;
     --color-h: #D1D1FF;
     --color-bg-body: #212529;
     --color-bg-main: #495057;
     --color-header: #f8f9fa;
     --color-bg-header: #343a40;
-    --color-border: #dee2e6;
+    --color-border: #e9ecef;
     --color-link: #adb5bd;
+    --color-link-hovered: #ced4da;
 }
 
 *, *::before, *::after {
@@ -69,50 +70,79 @@ ul {
 section {
     margin: 4rem auto 0;
 }
-/* #region header */
+/* #region #header */
 
-header {
+#header {
     background: var(--color-bg-header);
     grid-column: 1/-1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+#header-icon {
+    max-width: 5vw;
+    aspect-ratio: 3/3.5;
+    padding: 0.5rem;
+    margin-right: 0.2rem;
+    border-radius: 20%;
 }
 
 #navbar {
     margin: 0.2rem;
 }
 
-#navbar ul {
+#navbar-links {
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     letter-spacing: 0.3rem;
+    font-size: 2.5rem;
 }
 
-#navbar ul li {
+#navbar-links li {
     margin: 0.2rem 1.2rem;
     padding: 0.4rem;
     border-radius: 0.4rem;
 }
 
-#navbar ul li:hover {
-    color: var(--color-bg-header);
-    background-color: var(--color-header);
+.navbar-link.underline-hover-effect::before {
+    background: var(--color-link);
 }
 
-#navbar ul li a {
-    color: var(--color-header);
+.navbar-link:hover {
+    color: var(--color-link-hovered);
 }
 
-#navbar ul li:hover a {
-    color: var(--color-bg-header);
+/* #region .underline-hover-effect */
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.4rem; /* defines the space between text and underline */
+  position: relative;
 }
 
-/* #endregion */
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.15rem;
+  transition: width 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-/* #region main */
+}
+.underline-hover-effect:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+/* #endregion .underline-hover-effect*/
+
+/* #endregion #header*/
+
+/* #region #main */
 
 #main {
     grid-column: 2/3;
@@ -142,7 +172,7 @@ header {
     background-color: var(--color-bg-main);
 }
 
-/* #endregion */
+/* #endregion #main*/
 
 /* footer */
 
