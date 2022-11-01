@@ -1,0 +1,213 @@
+:root {
+	--color-aliceBlue: rgb(219, 235, 245);
+	--color-blueJeans: rgb(0, 166, 251);
+	--color-blueJeans-alpha: rgba(0, 166, 251, 0.4);
+	--color-greenBlue: rgb(5, 130, 202);
+	--color-greenBlue-alpha: rgba(5, 130, 202, .25);
+	--color-sapphireBlue: rgb(0, 100, 148);
+	--color-prussianBlue: rgb(0, 53, 84);
+	--color-prussianBlue-alpha: rgba(0, 53, 84, .8);
+	--color-richBlack: rgb(5, 25, 35);
+	--color-richBlack-alpha: rgba(5, 25, 35, .8);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.4;
+	color: var(--color-blueJeans);
+	margin: 0;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background: var(--color-prussianBlue-alpha);
+	/*sapphire blue to prussian blue gradient*/
+	background-image: linear-gradient(0deg, rgba(0, 100, 148, 0.9),
+	rgba(0, 53, 84, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+h1 {
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+p {
+	font-size: 1.125rem;
+}
+
+h1,
+p {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+label {
+	display: flex;
+	align-items: center;
+	font-size: 1.125rem;
+	margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+button {
+	border: none;
+}
+
+.container {
+	width: 100%;
+	margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+.header {
+	padding: 0 0.625rem;
+	margin-bottom: 1.875rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.description {
+	font-style: italic;
+	font-weight: 200;
+	text-shadow: 0.5px 0.5px 0.5px var(--color-blueJeans-alpha);
+}
+
+.clue {
+	margin-left: 0.25rem;
+	font-size: 0.9rem;
+	color: var(--color-greenBlue);
+}
+
+/*form*/
+
+form {
+	background: var(--color-richBlack-alpha);
+	padding: 2.5rem 0.625rem;
+	border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+	form {
+		padding: 2.5rem;
+	}
+}
+
+.form-group {
+	margin: 0 auto 1.25rem auto;
+	padding: 0.25rem;
+}
+
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: var(--color-greenBlue);
+	font-style: italic;
+	opacity: .9; /* Firefox */
+}
+
+/*Change placeholder color on focus*/
+
+/*input::-webkit-input-placeholder {
+	color: var(--color-greenBlue);
+}
+input:focus::-webkit-input-placeholder {
+	color: var(--color-aliceBlue);
+}*/
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 2.375rem;
+	padding: 0.375rem 0.75rem;
+	
+}
+.form-control, .input-textarea{
+	color: var(--color-aliceBlue);
+	background-color: var(--color-prussianBlue);
+	background-clip: padding-box;
+	border: 1px solid var(--color-sapphireBlue);
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus, .input-textarea:focus {
+	border-color: var(--color-greenBlue);
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem var(--color-greenBlue-alpha);
+}
+ 
+/*I tried to change the style of select options. But it doesn't work */
+/*Here is a probable solution: https://stackoverflow.com/questions/10484053/change-select-list-option-background-colour-on-hover/48375359#48375359 */
+/*But I don't know how to make use of it yet. I have to learn more :) */
+ 
+/*select option:checked,
+select option:hover {
+	box-shadow: 0 0 10px 100px var(--color-greenBlue) inset;
+}
+
+select:focus > option:checked {
+	background: var(--color-greenBlue) !important;
+}*/
+
+.input-radio,
+.input-checkbox {
+	display: inline-block;
+	margin-right: 0.625rem;
+	min-height: 1.25rem;
+	min-width: 1.25rem;
+}
+
+.input-textarea {
+	min-height: 120px;
+	width: 100%;
+	padding: 0.625rem;
+	resize: vertical;
+}
+
+.submit-button {
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	background: var(--color-richBlack);
+	color: inherit;
+	border-radius: 2px;
+	cursor: pointer;
+}

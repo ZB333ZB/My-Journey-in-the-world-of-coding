@@ -1,0 +1,163 @@
+/* - Your portfolio should have at least one media query
+
+- The height of the welcome section should be equal to the height of the viewport
+
+- The navbar should always be at the top of the viewport */
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+:root {
+    --color-text: #ced4da;
+    --color-h: #D1D1FF;
+    --color-bg-body: #212529;
+    --color-bg-main: #495057;
+    --color-header: #f8f9fa;
+    --color-bg-header: #343a40;
+    --color-border: #dee2e6;
+    --color-link: #adb5bd;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid #dee2e6; */
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color-text);
+    background: var(--color-bg-body);
+    font-size: 1.8rem;
+    letter-spacing: 0.6rem;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+}
+
+h1 {
+    font-size: 6rem;
+    margin: 2rem auto;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    margin: 1rem auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-h);
+    text-align: center;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+section {
+    margin: 4rem auto 0;
+}
+/* #region header */
+
+header {
+    background: var(--color-bg-header);
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar {
+    margin: 0.2rem;
+}
+
+#navbar ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    letter-spacing: 0.3rem;
+}
+
+#navbar ul li {
+    margin: 0.2rem 1.2rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+#navbar ul li:hover {
+    color: var(--color-bg-header);
+    background-color: var(--color-header);
+}
+
+#navbar ul li a {
+    color: var(--color-header);
+}
+
+#navbar ul li:hover a {
+    color: var(--color-bg-header);
+}
+
+/* #endregion */
+
+/* #region main */
+
+#main {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--color-bg-main);
+    padding: 0;
+    border-radius: 0% 0% 0.5rem 0.5rem;
+}
+
+#welcome-section {
+    background: var(--color-bg-body);
+    margin: 0;
+    padding: 6rem 0 7rem;
+}
+
+#title {
+    font-family: 'Righteous', cursive;
+}
+
+#subtitle {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#projects {
+    background-color: var(--color-bg-main);
+}
+
+/* #endregion */
+
+/* footer */
+
+@media only screen and (max-width:720px) {
+    /* columned images into rows */
+}
+
+@media only screen and (max-width:600px) {
+    /* columned text into rows */
+}
+
+@media only screen and (max-width:550px) {
+    /* h, font-size, letter-spacing ~ smaller, word-break */
+}
+
+@media only screen and (max-width:420px) {
+    /* h even smaller */
+}

@@ -1,0 +1,167 @@
+:root {
+    --bgcolor: #f8f9faff;
+    --bgcolor-code: #e9ecefff;
+    --bgcolor-th: #dee2e6ff;
+    --border: #6c757dff;
+    --text-p: #495057ff;
+    --text-h: #212529;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    /* 62.5% of 16px browser font size is 10px */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    color: var(--text-p);
+    min-width: 30rem;
+    background-color: var(--bgcolor);
+    line-height: 1.5;
+}
+
+/* navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30rem;
+    border-right: 3px solid var(--border);
+}
+
+header{
+    color: var(--text-h);
+    margin: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 1rem;
+}
+
+#navbar ul {
+    height: 90%;
+    padding: 0;
+    overflow: hidden auto;
+}
+
+#navbar li{
+    color: var(--text-p);
+    list-style: none;
+    width: 100%;
+    border-top: 0.1rem solid;
+    width: 100%;
+    position: relative;
+}
+
+#navbar .nav-link {
+    display: block;
+    padding: 0.8rem 3rem;
+    text-decoration: none;
+    color: var(--text-p);
+}
+
+/* main doc */
+
+#main-doc {
+    position: absolute;
+    margin-left: 31rem;
+    padding: 2rem;
+    margin-bottom: 10rem;
+    text-align: left;
+}
+
+#main-doc header {
+    text-align: left;
+    margin-left: 2rem;
+}
+
+section table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+section table th {
+    padding: 1rem 0.5rem 0.5rem 1rem;
+    background-color: var(--bgcolor-th);
+}
+
+section table td {
+    padding: 0.5rem;
+}
+
+section table th, section table td {
+    border: 0.1rem solid var(--border)
+}
+
+section article {
+    margin: 1.5rem;
+}
+
+section li {
+    margin: 1.5rem 0 0 2rem;
+}
+
+code {
+    font-family: monospace;
+    background-color: var(--bgcolor-code);
+    border-radius: 0.4rem;
+}
+
+code.block {
+    padding: 1rem;
+    margin: 1rem;
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: break-word;
+    word-wrap: normal;
+}
+
+img.svg {
+    width: max(300px, 30vw);
+    aspect-ratio: initial;
+    object-fit: fill;
+}
+
+/* media */
+
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+    #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 25rem;
+        border: none;
+        z-index: 1;
+        background-color: var(--bgcolor);
+    }
+
+    #navbar ul {
+        border: 0.1rem solid;
+        height: 20rem;
+        border-bottom: 0.2rem solid;
+    }
+
+    #main-doc {
+        position: relative;
+        margin-left: 0;
+        margin-top: 30rem;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #main-doc {
+        margin-left: -1rem;
+    }
+}

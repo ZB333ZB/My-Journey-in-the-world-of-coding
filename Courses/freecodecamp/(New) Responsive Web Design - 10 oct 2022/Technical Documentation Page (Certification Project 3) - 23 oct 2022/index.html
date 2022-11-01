@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Getting started with HTML">
+    <title>HTML Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar" aria-label="Main">
+        <header>HTML Documentation</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Getting_started_with_HTML" accesskey="1">Getting started with HTML</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#What_is_HTML" accesskey="2">What is HTML</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Anatomy_of_an_HTML_element" accesskey="3">Anatomy of an HTML element</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Nesting_elements" accesskey="4">Nesting elements</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Block_versus_inline_elements" accesskey="5">Block versus inline elements</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Void_elements" accesskey="6">Void elements</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Reference" accesskey="7">Reference</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc" aria-label="Content">
+        <section id="Getting_started_with_HTML" class="main-section">
+            <header>Getting started with HTML</header>
+            <article>
+                <p>In this article we cover the absolute basics of HTML. To get you started, this article defines elements, attributes, and all the other important terms you may have heard. It also explains where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML page is structured, and other important basic language features. Along the way, there will be an opportunity to play with HTML too!</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Prerequisites:</th>
+                            <td>Basic computer literacy, basic software installed, and basic knowledge of working with files.</td>
+                        </tr>
+                        <tr>
+                            <th>Objective:</th>
+                            <td>To gain basic familiarity with HTML, and practice writing a few HTML elements.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <section id="What_is_HTML" class="main-section">
+            <header>What is HTML</header>
+            <article>
+                <p>HTML (HyperText Markup Language) is a <em>markup language </em>that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or <em>mark up</em> different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:</p>
+                <code class="block">My cat is very grumpy</code>
+                <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph (<code>&lt;p&gt;</code>) element:</p>
+                <code class="block">&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code>
+            </article>
+        </section>
+        <section id="Anatomy_of_an_HTML_element" class="main-section">
+            <header>Anatomy of an HTML element</header>
+            <article>
+                <p>The anatomy of our element is:</p>
+                <img class="svg" src="anatomy_of_an_html_element.svg" alt="Opening and closing paragraph tags with the text between">
+                <ul>
+                    <li><strong>The opening tag:</strong> This consists of the name of the element (in this example, <em>p</em> for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+                    <li><strong>The content:</strong> This is the content of the element. In this example, it is the paragraph text.</li>
+                    <li><strong>The closing tag:</strong> This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.</li>
+                </ul>
+                <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+            </article>
+        </section>
+        <section id="Nesting_elements" class="main-section">
+            <header>Nesting elements</header>
+            <article>
+                <p>Elements can be placed within other elements. This is called <em>nesting</em>. If we wanted to state that our cat is <strong>very</strong> grumpy, we could wrap the word <em>very</em> in a <code>&lt;strong&gt;</code> element, which means that the word is to have strong(er) text formatting:</p>
+                <code class="block">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;
+                </code>
+                <p>There is a right and wrong way to do nesting. In the example above, we opened the <code>p</code> element first, then opened the <code>strong</code> element. For proper nesting, we should close the <strong>strong</strong> element first, before closing the <strong>p</strong>.</p>
+                <p>The following is an example of the <em>wrong</em> way to do nesting:</p>
+                <code class="block">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;
+                </code>
+                <p>The <strong>tags have to open and close in a way that they are inside or outside one another</strong>. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.</p>
+            </article>
+        </section>
+        <section id="Block_versus_inline_elements" class="main-section">
+            <header>Block versus inline elements</header>
+            <article>
+                <p>There are two important categories of elements to know in HTML: block-level elements and inline elements.</p>
+                <ul>
+                    <li>Block-level elements form a visible block on a page. A block-level element appears on a new line following the content that precedes it. Any content that follows a block-level element also appears on a new line. Block-level elements are usually structural elements on the page. For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.</li>
+                    <li>Inline elements are contained within block-level elements, and surround only small parts of the document's content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document. It is typically used with text, for example an <code>&lt;a&gt;</code> element creates a hyperlink, and elements such as <code>&lt;em&gt;</code> or <code>&lt;strong&gt;</code> create emphasis.</li>
+                </ul>
+            </article>
+        </section>
+        <section id="Void_elements" class="main-section">
+            <header>Void elements</header>
+            <article>
+                <p>Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called void elements. For example, the <code>&lt;img&gt;</code> element embeds an image file onto a page:</p>
+                <code class="block">&lt;img &#13;src=&quot;https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png&quot; alt=&quot;Firefox icon&quot; /&gt;
+                </code>
+                <p>This would output the following:</p>
+                <img src="firefox-icon.png" alt="Firefox icon">
+            </article>
+        </section>
+        <section id="Reference" class="main-section">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Student Quiz">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <title>A Student Quiz; I'm learning the code</title>
+</head>
+<body>
+  <header>
+    <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="" id="logo">
+    <h1>HTML/CSS Quiz</h1>
+    <nav>
+      <ul>
+        <li><a href="#student-info" accesskey="i">INFO</a></li>
+        <li><a href="#html-questions" accesskey="h">HTML</a></li>
+        <li><a href="#css-questions" accesskey="c">CSS</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+      <section role="region" aria-labelledby="student-info">
+        <h2 id="student-info">Student Info</h2>
+        <div class="info">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="info">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="info">
+          <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+          <input type="date" name="birth-date" id="birth-date">
+        </div>
+      </section>
+      <section role="region" aria-labelledby="html-questions">
+        <h2 id="html-questions">HTML Questions</h2>
+        <div class="question-block">
+          <p>1</p>
+          <fieldset class="question" name="html-q1">
+            <legend>Is HTML hard to learn?</legend>
+            <ul class="answers-list">
+              <li>
+                <label for="html-q1-a1">
+                  <input type="radio" name="html-q1-a1" id="html-q1-a1" value="true">True 
+                </label>
+              </li>
+              <li>
+                <label for="html-q1-a2">
+                  <input type="radio" name="html-q1-a2" id="html-q1-a2" value="false">False
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="question-block">
+          <p>2</p>
+          <fieldset class="question" name="html-q2">
+            <legend>Do you like HTML?</legend>
+            <ul class="answers-list">
+              <li>
+                <label for="html-q2-a1">
+                  <input type="radio" name="html-q2-a1" id="html-q2-a1" value="true">True
+                </label>
+              </li>
+              <li>
+                <label for="html-q2-a2">
+                  <input type="radio" name="html-q2-a2" id="html-q2-a2" value="false">False
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </section>
+      <section role="region" aria-labelledby="css-questions">
+        <h2 id="css-questions">CSS Questions</h2>
+        <div class="formrow">
+          <div class="question-block">
+            <label for="css-q1">Do you like CSS?</label>
+          </div>
+          <div class="answer">
+            <select id="css-q1" name="css-q1" required>
+              <option value="">Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="question-block">
+            <label for="css-a2">Is CSS an easy language?</label>
+          </div>
+          <div class="answer">
+            <textarea id="css-a2" name="css-a2" rows="4" cols="50" placeholder="Write whether CSS is an easy language"></textarea>
+          </div>
+        </div>
+      </section>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </main>
+  <footer>
+    <address>
+      <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+      San Francisco<br />
+      California<br />
+      USA
+    </address>
+  </footer>
+</body>
+</html>

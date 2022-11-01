@@ -1,0 +1,239 @@
+:root {
+  --baby-blue-eyes: #93c0f1ff;
+  --aero: #8ab6e3ff;
+  --iceberg: #81abd5ff;
+  --shadow-blue: #668aabff;
+  --cerulean-frost1: #749BC0ff;
+  --cerulean-frost2: #6A8FB1ff;
+  --steel-blue: #5F82A1ff;
+  --dark-electric-blue: #4a6981ff;
+  --charcoal2: #385365;
+  --charcoal1: #263d49ff;
+  --charcoal-alpha: rgb(38, 61, 73, 0.);
+  --rich-black-fogra-29: #011111ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth; } }
+
+@font-face {
+  font-family: Raleway;
+  src: url(./Raleway-Regular.ttf);
+}
+
+html {
+  /* Setting a base font size of 10px give us easier rem calculations
+
+	   Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+
+	 */
+  font-size: 10px; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--rich-black-fogra-29);
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(180deg, var(--cerulean-frost1), var(--shadow-blue));
+}
+
+.wrapper {
+	width: 100%;
+	margin: 5rem auto 0 auto;
+}
+
+/* header */
+
+header {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--cerulean-frost1);
+  display: flex;
+  top: 0;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid black; */
+}
+
+nav {
+  width: 50%;
+  max-width: 30rem;
+  height: 5rem;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav li {
+  font-size: min(2.5vw, 2rem);
+  color: var(--charcoal1);
+  margin: 0 0.1rem;
+  padding: 0.1rem;
+  display: block;
+}
+
+nav li:hover {
+  background: var(--charcoal1);
+  color: var(--cerulean-frost1);
+  cursor: pointer;
+}
+nav li:hover a {
+  color: var(--cerulean-frost1);
+  cursor: pointer;
+}
+
+nav a {
+  /* the contrast between the text and the background of a heading should be at least 4.5:1 */
+  text-decoration: none; /* remove the link's default underline */
+}
+
+#logo {
+  width: max(100px, 18vw);
+  aspect-ratio: 35/5; /* As described in the freeCodeCamp Style Guide, the logo should retain an aspect ratio of 35 / 4, and have padding around the text. */
+  padding: 0.2rem;
+}
+
+.tagline {
+  font-size: min(2.5vw, 2.5rem);
+  text-align: center;
+  font-family: Raleway;
+}
+
+/* main */
+
+main {
+  margin: 0;
+  padding: 4rem 1rem;
+  border-radius: 0 0 0.4rem 0.4rem;
+  background: linear-gradient(0deg, var(--cerulean-frost1) 2%, var(--iceberg), var(--aero));
+  height: 100%;
+  width: 100%;
+  margin: 0 auto 1rem;
+}
+
+@media (min-width: 576px) {
+	main {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	main {
+		max-width: 720px;
+	}
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+@media (max-width: 460px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+}
+
+ h3 {
+  font-size: 1.8rem;
+} 
+
+a {
+  color: var(--charcoal1);
+}
+
+a:visited:not(nav a) {
+  color: var(--charcoal2);
+}
+
+ul {
+  max-width: 550px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+li {
+  margin: 16px 0;
+}
+
+#cite {
+  background: var(--cerulean-frost2);
+  border: 0.1rem solid var(--cerulean-frost2);
+  border-top: 0.5rem solid var(--shadow-blue);
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0px 0.5rem 5rem 0.5rem var(--shadow-blue);
+  font-style: italic;
+  width: 90%;
+  max-width: 545px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+#cite p{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+#img-div {
+  padding: 10px;
+  margin: 0;
+}
+
+#img-caption {
+  margin: 15px 0 5px 0;
+}
+
+@media (max-width: 460px) {
+  #img-caption {
+    font-size: 1.4rem;
+  }
+}
+
+#headline {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.content{
+  background: linear-gradient(0deg, var(--cerulean-frost), var(--iceberg), var(--aero), var(--baby-blue-eyes), var(--aero));
+}

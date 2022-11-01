@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora&family=Ubuntu&display=swap" rel="stylesheet">
+     <!--Font Awesome icons  -->
+     <script src="https://kit.fontawesome.com/d704cf03f8.js" crossorigin="anonymous"></script>
+     <meta name="description" content="Here you can buy honey from the beekeepers who have decades of real experience behind them">
+    <title>Beest. | Real Honey from Real Beekeepers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <img src="favicon.svg" alt="Beest logo" loading="lazy" id="header-img">
+        <div id="contact-us">
+            <p>Don't hesitate to contact us:</p>
+            <p id="phone-number">86-755-25841565</p>
+        </div>
+        <nav id="nav-bar">
+            <ul id="nav-links">
+                <li>
+                    <a href="#why_us" class="nav-link">Why us?</a>
+                </li>
+                <li>
+                    <a href="#how_we_make_it" class="nav-link">How we make it</a>
+                </li>
+                <li>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <h1 id="heading">Real Honey from Real Beekeepers</h1>
+        <form action="https://www.freecodecamp.com/email-submit" method="post" id="form">
+            <label for="email">
+                <h3 id="form-heading">Subscribe to our newsletter and stay tuned!</h3>
+            </label>
+            <input type="email" id="email" placeholder="Enter your email address" name="email">
+            <input type="submit" id="submit">
+        </form>
+        <section id="why_us">
+            <h2 id="why_us-heading">Why us?</h2>
+            <div id="why_us-list">
+                <div class="icon"><i class="fa-solid fa-award"></i></div>
+                <div class="desc">More than 20 years experience in our family business</div>
+                <div class="icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                <div class="desc">Thousands of satisfied customers</div>
+                <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="desc">Fast and free delivery</div>
+                <div class="icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                <div class="desc">Only certified and proven products</div>
+            </div>
+        </section>
+        <section id="how_we_make_it">
+            <h2 id="how_we_make_it-heading">How we make it</h2>
+            <!-- <video src="Collecting honey.mp4" controls id="video" loading="lazy"></video> -->
+            <iframe src="https://www.youtube-nocookie.com/embed/wdNrZHkBZ4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video" loading="lazy"></iframe>
+        </section>
+        <section id="pricing">
+            <h2 id="pricing-heading">Pricing</h2>
+            <div class="option">
+                <h3>Buckwheat honey</h3>
+                <img src="buckwheat honey.jpg" alt="A jar of buckwheat honey" loading="lazy">
+                <button class="choose-button">Select</button>
+            </div>
+            <div class="option">
+                <h3>Linden honey</h3>
+                <img src="linden honey.jpg" alt="A jar of linden honey" loading="lazy">
+                <button class="choose-button">Select</button>
+            </div>
+            <div class="option">
+                <h3>Acacia honey</h3>
+                <img src="acacia honey.jpg" alt="A jar of acacia honey" loading="lazy">
+                <button class="choose-button">Select</button>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <p id="copyright">Copyright 2022, Beest.</p>
+    </footer>
+</body>
+</html>
