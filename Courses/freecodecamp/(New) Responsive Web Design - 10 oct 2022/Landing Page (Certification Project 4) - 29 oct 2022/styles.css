@@ -14,7 +14,9 @@
     --color-link: #003566;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
 }
@@ -42,12 +44,21 @@ h1 {
     margin: 2rem auto;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Ubuntu', sans-serif;
     margin: 1.5rem auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--color-h);
     text-align: center;
 }
@@ -57,7 +68,7 @@ a {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: var(--color-bg);
     background-color: var(--color-link);
 }
@@ -114,7 +125,8 @@ section {
         transform: scale(1.05, 1.05) rotate(-1deg);
     }
 
-    12.5%, 100% {
+    12.5%,
+    100% {
         transform: scale(1, 1) rotate(0deg);
     }
 }
@@ -170,7 +182,8 @@ section {
     margin-bottom: 1rem;
 }
 
-#email, #submit {
+#email,
+#submit {
     font-size: 1.6rem;
     padding: 0.5rem;
 }
@@ -197,19 +210,13 @@ section {
 /* #region responsive iframe */
 
 #how_we_make_it {
-    position: relative;
     width: 100%;
-    aspect-ratio: 16/9; /* default aspect of YT videos */
 }
 
 #video {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
+    max-height: 100%;
     width: 100%;
-    position: absolute;
+    aspect-ratio: 16/9;
 }
 
 /* #endregion */
@@ -280,7 +287,7 @@ section {
         font-size: 1.6rem;
     }
 
-    #contact-us p{
+    #contact-us p {
         word-break: break-word;
     }
 }
