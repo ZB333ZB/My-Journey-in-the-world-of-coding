@@ -1,15 +1,22 @@
 const uniqueGroupGenerator = (arr, groupSize) => {
-    let newArr = [], groups = [];
-    let rand = Math.floor(Math.random() * names.length);
-    let i = 0;
-    while (i < arr.length) {
-        while (newArr.indexOf(arr[rand]) != - 1) rand = Math.floor(Math.random() * names.length);
-        newArr.push(arr[rand]);
-        i++;
+    const randomNum = (maxNum) => {
+        return rand = Math.floor(Math.random() * maxNum);
     }
-    for (let i = 0; i < newArr.length; i += groupSize) {
-        groups.push(newArr.slice(i, i + groupSize))
+
+    const arrShuffle = (arr) => {
+        let i = 0, rand, shuffledArr = [];
+        while (i < arr.length) {
+            do { rand = randomNum(arr.length) } while (shuffledArr.indexOf(arr[rand]) != - 1);
+            shuffledArr.push(arr[rand]);
+            i++;
+        }
+        return shuffledArr;
     }
+
+    let shuffledArr = arrShuffle(arr), groups = [];
+
+    for (let i = 0; i < shuffledArr.length; i += groupSize)
+        groups.push(shuffledArr.slice(i, i + groupSize))
     return groups;
 }
 
