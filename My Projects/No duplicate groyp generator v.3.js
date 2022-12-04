@@ -1,4 +1,4 @@
-//
+//The func creates given number of rounds with pairs from the given array of names, so that no pair repeats throughout all the rounds, and no name repeats throughout each round
 
 const uniqueGroupGenerator = (names, roundTotal) => {
     const getRandom = (maxNum) => {
