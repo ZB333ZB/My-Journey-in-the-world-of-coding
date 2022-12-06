@@ -1,5 +1,5 @@
 const uniqueGroupGenerator = (names, roundTotal) => {
-    const uniquePairs = names.flatMap((item1, index1) =>
+    const uniquePairs = (names) => names.flatMap((item1, index1) =>
         names.flatMap((item2, index2) => (index1 > index2) ? [[item1, item2]] : []));
 
     let result = [], usedPairs = [], usedNames = [], roundPairs = [], isUnique = false;
@@ -19,6 +19,6 @@ const uniqueGroupGenerator = (names, roundTotal) => {
     return result;
 }
 
-const names = ['Don', 'Jon', 'Kat', 'Ann', 'Bob', 'Cat', 'Han', 'Ed', 'Fay', 'Gil', 'Ian'];
+const names = ['Don', 'Jon', 'Kat', 'Ann', 'Bob', 'Cat', 'Han', 'Ed', 'Jack'];
 
-console.log(uniqueGroupGenerator(names, 3));
+console.log(uniqueGroupGenerator(names, 4));
